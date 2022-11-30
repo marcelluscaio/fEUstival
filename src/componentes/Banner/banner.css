@@ -1,0 +1,36 @@
+.header{
+   background-image: url('../../../public/joey-thompson-4zN_-PKsbWw-unsplash.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 30vh;
+   mix-blend-mode: soft-light;
+   display: flex;
+   justify-content: space-between;
+}
+
+.credit-container{
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.credit-vertical{
+   writing-mode: vertical-lr;
+   text-orientation: upright;
+}
+
+.credit-container > * {
+   font-size: 14px;
+   color: #0c3603;
+}
+
+.credit-line{
+   margin-left: 1ch;
+}
+
+.credit-line > a {
+   font-weight: bold;
+   text-decoration: underline; 
+   color: #98dfa1;
+}
