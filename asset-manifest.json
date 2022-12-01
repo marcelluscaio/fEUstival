@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/fEUstival/static/css/main.64063158.css",
+    "main.js": "/fEUstival/static/js/main.54606792.js",
+    "static/js/787.37bca3f3.chunk.js": "/fEUstival/static/js/787.37bca3f3.chunk.js",
+    "static/media/joey-thompson-4zN_-PKsbWw-unsplash.jpg": "/fEUstival/static/media/joey-thompson-4zN_-PKsbWw-unsplash.ba7d9b72600dbcfd4b50.jpg",
+    "index.html": "/fEUstival/index.html",
+    "main.64063158.css.map": "/fEUstival/static/css/main.64063158.css.map",
+    "main.54606792.js.map": "/fEUstival/static/js/main.54606792.js.map",
+    "787.37bca3f3.chunk.js.map": "/fEUstival/static/js/787.37bca3f3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64063158.css",
+    "static/js/main.54606792.js"
+  ]
+}
