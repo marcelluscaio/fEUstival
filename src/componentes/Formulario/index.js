@@ -23,9 +23,6 @@ const Formulario = (props) => {
       } , [])
 
       async function search (banda) {
-         console.log("Searching for " + banda);
-         console.log("Searching with " + accessToken);
-
          let busca = await fetch(`https://api.spotify.com/v1/search?q=${banda}&type=artist`, {
             method: 'GET',
             headers: {
@@ -35,22 +32,19 @@ const Formulario = (props) => {
             }
          });
          let buscaJSON = await busca.json();
-         console.log(buscaJSON.artists.items[0].images[0].url);
          setImagem(buscaJSON.artists.items[0].images[0].url);
       }
 
    const enviaFormulario = (e) => {
       e.preventDefault();
-      
-      search(banda)
-         .then(props.inserirBanda({
+      props.inserirBanda({
          banda: banda,
          imagem: imagem,
          palco: palco
-      }))
-      .then(setBanda(''))
-      .then(setImagem(''))
-      .then(setPalco(''))     
+      })
+      setBanda('')      
+      setImagem('')
+      setPalco('')   
       
       
    }
@@ -65,7 +59,9 @@ const Formulario = (props) => {
                value={banda} 
                onChange={(e) => {
                   e.preventDefault();
-                  setBanda(e.target.value);
+                  setBanda(e.target.value);       
+                  search(banda)
+                   
                   }
                } 
                required />

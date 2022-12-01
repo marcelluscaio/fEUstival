@@ -1,4 +1,6 @@
-Entender por que a primeira insercao está travando
+Próximos passos:
+Estilizar
+Fazer a busca trazer as opções de bandas e permitir seleção ao clique
 
 
 # Getting Started with Create React App
