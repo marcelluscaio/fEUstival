@@ -1,11 +1,13 @@
 import './formulario.css';
 import {useState, useEffect} from 'react';
 import { client_id, client_secret } from '../../keys.js'
+import { getElementError } from '@testing-library/react';
 
 const Formulario = (props) => {
 
    const [banda, setBanda] = useState('');
    const [imagem, setImagem] = useState('');
+   const [genero, setGenero] = useState('');
    const [palco, setPalco] = useState('');
    const [accessToken, setAccessToken] = useState("");
 
@@ -33,12 +35,14 @@ const Formulario = (props) => {
       });
       let buscaJSON = await busca.json();
       setImagem(buscaJSON.artists.items[0].images[0].url);
+      setGenero(buscaJSON.artists.items[0].genres[0]);
    }
 
    useEffect(() =>{
          props.inserirBanda({
                banda: banda,
                imagem: imagem,
+               genero: genero,
                palco: palco
             })
             setBanda('')      

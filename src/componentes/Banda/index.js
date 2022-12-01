@@ -1,6 +1,6 @@
 import './banda.css';
 
-const Banda = ({banda, imagem, cor}) => {
+const Banda = ({banda, imagem, cor, genero}) => {
    return(
       <div className='banda'>
          <div className='banda__cabecalho' style={{backgroundColor: cor}}>
@@ -8,7 +8,7 @@ const Banda = ({banda, imagem, cor}) => {
          </div>
          <div className='banda__rodape'>
             <h4 className={'rodape__nome'} style={{color: cor}}>{banda}</h4>
-            <h5 className={'rodape__genero'} style={{color: cor}}>{'Genero'}</h5>
+            <h5 className={'rodape__genero'} style={{color: cor}}>{genero}</h5>
          </div>
       </div>
    
