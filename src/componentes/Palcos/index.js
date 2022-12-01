@@ -1,0 +1,17 @@
+import './palcos.css';
+
+import Banda from '../Banda';
+
+const Palcos = (props) => {
+   return(
+      props.bandas.length > 0 && <section className='palco' style={{backgroundColor: props.cor2}}>
+         <h3 className='palco__titulo' style={{borderColor: props.cor1}}>{props.nome}</h3>
+         {/* <Colaborador /> */}
+         <div className='palco__bandas'>
+            {props.bandas.map(banda => <Banda key={banda.banda} nome={banda.banda} imagem={banda.imagem} palco={banda.palco} cor={props.cor1} />)}
+         </div>
+      </section>
+   )
+}
+
+export default Palcos;
