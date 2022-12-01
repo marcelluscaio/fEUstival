@@ -1,0 +1,51 @@
+.formulario{
+   margin: 1rem auto;
+}
+
+.formulario form{
+   padding-left: 1.25em;
+}
+
+.field-container{
+   margin-bottom: .5rem;
+}
+
+.field-container > label{
+   display: inline-block;
+   width: 6ch;
+   color: #ccdbcc;
+}
+
+.field-container > input,
+.field-container > select{
+   padding-left: 1em;
+   width: 70%;
+   height: 2em;
+   border-radius: 1em;
+   border: 1px solid #191414;
+   color: #ccdbcc;
+   background-image: linear-gradient(45deg, transparent -500%, #191414 120%);
+}
+
+option{
+   background: #ccdbcc;
+   color: #191414 ;
+   box-shadow: inset 1px 1px 3px 3px #ccdbcc;   
+}
+
+
+.field-container > input::placeholder{
+   color: #1DB954;
+   opacity: 0.7;
+}
+
+.formulario form > button{
+   width: 75%;
+   height: 3em;
+   border-radius: 1.5em;
+   background-image: linear-gradient(45deg, #1DB954 -50%, #191414 120%);
+   border: 2px solid #191414;
+   color: #ccdbcc;
+   margin: 0 auto;
+   display: block;
+}

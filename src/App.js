@@ -21,7 +21,7 @@ function App() {
     {
       nome: 'Grunge sofrência',
       cor1: '#A6D157',
-      cor2: 'F0F8E2'
+      cor2: '#F0F8E2'
     },
     {
       nome: 'Desistimos de classificar',

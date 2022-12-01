@@ -4,11 +4,11 @@ const Banda = ({banda, imagem, cor}) => {
    return(
       <div className='banda'>
          <div className='banda__cabecalho' style={{backgroundColor: cor}}>
-            <img src={imagem} alt={banda}/>
+            <img className={'cabecalho__imagem'} src={imagem} alt={banda}/>
          </div>
          <div className='banda__rodape'>
-            <h4 style={{color: cor}}>{banda}</h4>
-            <h5 style={{color: cor}}>{'Genero'}</h5>
+            <h4 className={'rodape__nome'} style={{color: cor}}>{banda}</h4>
+            <h5 className={'rodape__genero'} style={{color: cor}}>{'Genero'}</h5>
          </div>
       </div>
    

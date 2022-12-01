@@ -1,0 +1,26 @@
+.banda{   
+   width: 45%;
+   margin-bottom: 1rem;
+}
+
+.cabecalho__imagem{
+   width: 30vw;
+   height: 30vw;
+   border-radius: 50%;
+   margin: 0 auto;
+   display: block;
+   transform: translateY(15%);
+
+}
+
+.banda__rodape{
+   text-align: center;
+}
+
+.rodape__nome{
+   margin: 1rem 0 0;
+}
+
+.rodape__genero{
+   margin: .5rem 0 0;
+}
