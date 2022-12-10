@@ -5,14 +5,25 @@
    background-size: cover;
    height: 30vh;
    mix-blend-mode: soft-light;
+   position: relative;
+   margin-bottom: 2rem;
+   /* 
    display: flex;
-   justify-content: space-between;
+   justify-content: space-between; */
 }
 
-.credit-container{
-   height: 100%;
-   display: flex;
-   flex-direction: column;
+.credit{
+   width: 100%;
+   padding: 0;
+   margin: 0;
+   line-height: 1.4;
+   white-space: nowrap;
+   position: absolute;
+   bottom: -1.5rem;
+   background-color: black;
+   color: white;
+   mix-blend-mode: none;
+   
 }
 
 .credit-vertical{
