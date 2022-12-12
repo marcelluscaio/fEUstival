@@ -7,34 +7,45 @@
    mix-blend-mode: soft-light;
    position: relative;
    margin-bottom: 2rem;
-   /* 
-   display: flex;
-   justify-content: space-between; */
 }
 
 .credit{
-   width: 400%;
+   width: 100%;
+   height: 1.5rem;
    padding: 0;
    margin: 0;
-   line-height: 1.4;
-   white-space: nowrap;
+   
    position: absolute;
    bottom: -1.5rem;
-   background-color: black;
-   color: white;
-   mix-blend-mode: none;
-   display: flex;
-   justify-content: space-evenly;
+
+   overflow: hidden;
+
+}
+
+.credit__line{
+   line-height: 1.4;
+   white-space: nowrap;
+   padding: 0;
+   margin: 0;
+   font-size: 14px;
+   color: #98dfa1;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 100%;
    animation-name: slide;
    animation-timing-function: linear;
-   animation-duration: 10s;
+   animation-duration: 30s;
    animation-iteration-count: infinite;
-   
+}
+
+.second{
+   animation-delay: 15s;
 }
 
 @keyframes slide{
    0%{
-      left: 0;
+      left: 100%;
    }
    100%{
       left: -100%;
@@ -42,22 +53,7 @@
 
 }
 
-.credit-vertical{
-   writing-mode: vertical-lr;
-   text-orientation: upright;
-}
-
-.credit-container > * {
-   font-size: 14px;
-   color: #0c3603;
-}
-
-.credit-line{
-   margin-left: 1ch;
-}
-
-.credit-line > a {
-   font-weight: bold;
+.credit__line > a {
    text-decoration: underline; 
    color: #98dfa1;
 }
