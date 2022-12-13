@@ -11,4 +11,30 @@
 .App {
   background-image: linear-gradient(-45deg, #1DB954 -50%, #191414 120%);
   min-height: 100vh;
+  padding-bottom: calc(3vw + 3vh);
+}
+
+::selection{
+   color: var(--black);
+   background-color: var(--green) ;
+}
+
+ html{
+   scrollbar-color: var(--black) var(--green);
+   scrollbar-width: 2vw;  /*Melhorar medida*/
+ } 
+
+::-webkit-scrollbar{
+    width: 2vw; /*Melhorar medida*/
+    background-image: linear-gradient( var(--green) -100%, var(--black) 100%)
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 1px var(--black);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(60deg, var(--black) 0%, var(--green), var(--black) 100%);
+    outline: none;
+    border-radius: 1vw;
 }

@@ -1,5 +1,11 @@
 .palco{
-   padding: 0 1em;
+   padding: calc(1vw + 1vh);
+   width: 80%;
+   margin: 0 auto calc(2vw + 2vh);
+}
+
+.palco:last-of-type{
+   margin: 0 auto;
 }
 
 .palco__titulo{
