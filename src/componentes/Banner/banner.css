@@ -11,12 +11,12 @@
 
 .credit{
    width: 100%;
-   height: 1.5rem;
+   height: var(--size-normal);
    padding: 0;
    margin: 0;
    
    position: absolute;
-   bottom: -1.5rem;
+   bottom: calc(-1 * var(--size-normal));
 
    overflow: hidden;
 
@@ -27,7 +27,7 @@
    white-space: nowrap;
    padding: 0;
    margin: 0;
-   font-size: 14px;
+   font-size: var(--size-small);
    color: #98dfa1;
    width: 100%;
    position: absolute;

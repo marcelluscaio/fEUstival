@@ -1,25 +1,25 @@
 .formulario{
-   margin: 1rem auto;
-}
-
-.formulario form{
-   padding-left: 1.25em;
+   padding: calc(2vh + 2vw) 0;
 }
 
 .field-container{
-   margin: 0 auto .5rem;
+   margin: 0 auto calc(1vh + 1vw);
    display: flex;
-   width: calc(80% - 6ch);
+   flex-direction: column;
+   gap: 1vw;
+   width: min(75%, calc(30 * var(--size-small)));
 }
 
 .field-container > label{
    display: inline-block;
    width: 6ch;
    color: #ccdbcc;
+   font-size: var(--size-normal);
 }
 
 .field-container > input,
 .field-container > select{
+   font-size: var(--size-normal);
    padding-left: 1em;
    width: 100%;
    height: 2em;
@@ -27,27 +27,51 @@
    border: 1px solid #191414;
    color: #ccdbcc;
    background-image: linear-gradient(45deg, transparent -500%, #191414 120%);
+   background-color: var(--green);
 }
 
 option{
    background: #ccdbcc;
    color: #191414 ;
-   box-shadow: inset 1px 1px 3px 3px #ccdbcc;   
 }
-
 
 .field-container > input::placeholder{
    color: #1DB954;
    opacity: 0.7;
+   font-size: var(--size-small);
+}
+
+input::-webkit-search-cancel-button{
+   display: none;
 }
 
 .formulario form > button{
-   width: 75%;
+   width: min(75%, calc(30 * var(--size-small)));
    height: 3em;
    border-radius: 1.5em;
    background-image: linear-gradient(45deg, #1DB954 -50%, #191414 120%);
    border: 2px solid #191414;
    color: #ccdbcc;
-   margin: 0 auto;
+   margin: calc(1.5vh + 1.5vw) auto;
    display: block;
+   font-size: var(--size-small);
+   font-weight: bold;
+}
+
+@media screen and (min-width: 800px){
+   .field-container{
+      flex-direction: row;
+      gap: 2vw;
+       align-items: baseline ;
+   }
+
+}
+
+@media screen and (min-width: 1600px){
+   
+   .field-container > input,
+   .field-container > select{
+      height: 2.5em;
+      border-radius: 1.25em;
+   }
 }
