@@ -4,7 +4,7 @@ Crie seu próprio lineup de festival. Escolha bandas e distribua elas pelos palc
 
 ## Objetivo
 
-O objetivo desse projeto era criar um site utilizando ReactJS e consumindo a API da Spotify.
+O objetivo deste projeto foi criar um site utilizando ReactJS e consumindo a API da Spotify.
 
 
 ## Construído com:
@@ -18,19 +18,12 @@ O objetivo desse projeto era criar um site utilizando ReactJS e consumindo a API
 :iphone: Paradigma Mobile-First; <br>
 :fountain_pen: Tipografia fluida
 
-
-## Screenshots
-<p align="middle">
-<img src="readme.jpg" width="24%" height="41%">
-</p>
-
-
 ## Acesse
 
 <a href="https://marcelluscaio.github.io/fEUstival/">Crie o seu fEUstival</a>.
 
 
-## No futuro
+## Próximos passos
 
 - [ ] Trazer opções de bandas para usuario e permitir seleção ao clique
 - [ ] Permitir criacao de novos palcos
@@ -38,3 +31,8 @@ O objetivo desse projeto era criar um site utilizando ReactJS e consumindo a API
 - [ ] Criar categoria de headliner (desaque na estilizacao)
 - [ ] Permitir drag and drop para organizar palcos
 - [ ] Compartilhar a propria lista no instagram
+
+## Screenshots
+<p align="middle">
+<img src="readme.jpg" width="100%" height="100%">
+</p>
