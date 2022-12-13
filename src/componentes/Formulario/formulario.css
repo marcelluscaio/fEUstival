@@ -7,7 +7,9 @@
 }
 
 .field-container{
-   margin-bottom: .5rem;
+   margin: 0 auto .5rem;
+   display: flex;
+   width: calc(80% - 6ch);
 }
 
 .field-container > label{
@@ -19,7 +21,7 @@
 .field-container > input,
 .field-container > select{
    padding-left: 1em;
-   width: 70%;
+   width: 100%;
    height: 2em;
    border-radius: 1em;
    border: 1px solid #191414;
