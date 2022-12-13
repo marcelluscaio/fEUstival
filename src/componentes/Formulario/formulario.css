@@ -56,6 +56,7 @@ input::-webkit-search-cancel-button{
    display: block;
    font-size: var(--size-small);
    font-weight: bold;
+   cursor: pointer;
 }
 
 @media screen and (min-width: 800px){
