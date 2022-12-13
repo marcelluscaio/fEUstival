@@ -1,15 +1,24 @@
 .banda{   
    width: 45%;
-   margin-bottom: 1rem;
+   margin-bottom: calc(3vw + 3vh);
 }
 
+.banda:last-of-type{ 
+   margin-right: auto;
+}
+
+.banda:nth-of-type(2n){
+   margin-right: 0;
+} 
+
+
 .cabecalho__imagem{
-   width: 30vw;
-   height: 30vw;
+   width: 75%;
+   aspect-ratio: 1;
    border-radius: 50%;
    margin: 0 auto;
    display: block;
-   transform: translateY(15%);
+   transform: translateY(25%);
 
 }
 
@@ -18,11 +27,13 @@
 }
 
 .rodape__nome{
-   margin: 1rem 0 0;
+   font-size: var(--size-normal);
+   margin: calc(6vw + 1vh) 0 0;
 }
 
 .rodape__genero{
-   margin: .25rem 0 0;
-   opacity: 0.75;
+   font-size: var(--size-small);
+   opacity: 0.60;
    text-transform: lowercase;
+   margin: 0;
 }

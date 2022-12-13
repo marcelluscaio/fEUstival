@@ -1,7 +1,6 @@
 import './formulario.css';
 import {useState, useEffect} from 'react';
-import { client_id, client_secret } from '../../keys.js'
-import { getElementError } from '@testing-library/react';
+import { client_id, client_secret } from '../../keys.js';
 
 const Formulario = (props) => {
 
@@ -34,6 +33,7 @@ const Formulario = (props) => {
          }
       });
       let buscaJSON = await busca.json();
+      setBanda(buscaJSON.artists.items[0].name);
       setImagem(buscaJSON.artists.items[0].images[0].url);
       setGenero(buscaJSON.artists.items[0].genres[0]);
    }
