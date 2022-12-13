@@ -9,9 +9,9 @@
 }
 
 .palco__titulo{
-   padding: 1em 0 0;
-   margin: 0 0 1rem;
-   border-bottom: .25rem solid;
+   margin: 0 0 calc(1.5vh + 1.5vw);
+   border-bottom: calc(0.15 * var(--size-normal)) solid;
+   font-size: var(--size-normal);
    display: inline-block;
    position: relative;
    left: 50%;

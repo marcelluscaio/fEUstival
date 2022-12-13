@@ -3,7 +3,7 @@
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
-   height: 30vh;
+   height: calc(25vh + 15vw);
    mix-blend-mode: soft-light;
    position: relative;
    margin-bottom: 2rem;
