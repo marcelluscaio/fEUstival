@@ -53,6 +53,17 @@
 
 }
 
+.credit:hover .credit__line{
+   animation: none;
+   width: auto;
+   left: 50%;
+   transform: translate(-50%);
+}
+
+.credit:hover .second{
+   display: none;
+}
+
 .credit__line > a {
    text-decoration: underline; 
    color: #98dfa1;
