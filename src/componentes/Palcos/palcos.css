@@ -16,7 +16,7 @@
    position: relative;
    left: 50%;
    transform: translateX(-50%);
-   filter: brightness(0.75);
+   filter: hue-rotate(330deg) brightness(1.25)
 }
 
 .palco__bandas{

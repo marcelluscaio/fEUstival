@@ -10,19 +10,19 @@ function App() {
   const palcos = [
     {
       nome: 'Metal pesadão',
-      cor: '#57C278'
+      cor: '#1DB954'
     },
     {
       nome: 'Punk divertido',
-      cor: '#82CFFA'
+      cor: '#009933'
     },
     {
       nome: 'Grunge sofrência',
-      cor: '#A6D157'
+      cor: '#66AA88'
     },
     {
       nome: 'Desistimos de classificar',
-      cor: '#E06B69'
+      cor: '#99EEBB'
     },
   ]; 
 
