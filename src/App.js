@@ -10,23 +10,19 @@ function App() {
   const palcos = [
     {
       nome: 'Metal pesadão',
-      cor1: '#57C278',
-      cor2: '#D9F7E9'
+      cor: '#57C278'
     },
     {
       nome: 'Punk divertido',
-      cor1: '#82CFFA',
-      cor2: '#E8F8FF'
+      cor: '#82CFFA'
     },
     {
       nome: 'Grunge sofrência',
-      cor1: '#A6D157',
-      cor2: '#F0F8E2'
+      cor: '#A6D157'
     },
     {
       nome: 'Desistimos de classificar',
-      cor1: '#E06B69',
-      cor2: '#FDE7E8'
+      cor: '#E06B69'
     },
   ]; 
 
@@ -43,8 +39,7 @@ function App() {
      {palcos.map(palco => <Palcos
         key={palco.nome} 
         nome={palco.nome} 
-        cor1={palco.cor1}
-        cor2={palco.cor2}
+        cor={palco.cor}
         bandas={bandas.filter(banda => banda.palco === palco.nome)}
       />)}
       
