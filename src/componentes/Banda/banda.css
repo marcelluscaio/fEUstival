@@ -1,6 +1,7 @@
 .banda{   
    width: 45%;
    margin-bottom: calc(3vw + 3vh);
+   position: relative;
 }
 
 .banda:last-of-type{ 
@@ -35,5 +36,14 @@
    font-size: var(--size-small);
    opacity: 0.60;
    text-transform: lowercase;
-   margin: 0;
+   margin: 0 0 0 .5em;
+}
+
+.banda__excluir{
+   position: absolute;
+   right: 0;
+   --size: calc(2vw + 2vh);
+   height: var(--size);
+   width: var(--size);
+   filter: grayscale(.35);
 }
