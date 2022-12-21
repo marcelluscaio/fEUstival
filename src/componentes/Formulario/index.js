@@ -43,7 +43,8 @@ const Formulario = (props) => {
                banda: banda,
                imagem: imagem,
                genero: genero,
-               palco: palco
+               palco: palco,
+               id: `${banda}-${palco}`
             })
             setBanda('')      
             setImagem('')

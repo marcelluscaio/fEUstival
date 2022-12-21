@@ -5,9 +5,9 @@ import Formulario from './componentes/Formulario';
 import Palcos from './componentes/Palcos';
 
 function App() {
- const [bandas, setBandas] = useState([]);
+  const [bandas, setBandas] = useState([]);
 
-  const palcos = [
+  const [palcos, setPalcos] = useState([
     {
       nome: 'Metal pesadão',
       cor: '#1DB954'
@@ -24,7 +24,11 @@ function App() {
       nome: 'Desistimos de classificar',
       cor: '#99EEBB'
     },
-  ]; 
+  ]);
+
+  function excluiBandaSelecionada(id){
+    setBandas(bandas.filter(banda => banda.id != id))
+  }
 
   return (
     <div className="App">
@@ -41,13 +45,8 @@ function App() {
         nome={palco.nome} 
         cor={palco.cor}
         bandas={bandas.filter(banda => banda.palco === palco.nome)}
+        excluiBanda = {excluiBandaSelecionada}
       />)}
-      
-      {/* */}
-      {/* <Palco nome={"Metal"} />
-      <Palco nome={"Punk"} />
-      <Palco nome={"Grunge"} /> */}
-
     </div>
   );
 }

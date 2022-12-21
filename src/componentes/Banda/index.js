@@ -1,7 +1,12 @@
 import './banda.css';
 import { BiTrash } from "react-icons/bi";
+import { BsCameraVideoFill, BsCameraVideoOffFill } from "react-icons/bs"
 
-const Banda = ({banda, imagem, cor, genero}) => {
+const Banda = ({banda, imagem, cor, genero, id, excluiBanda}) => {
+   function executaExcluiBanda(){
+      excluiBanda(id)
+   }
+   
    return(
       <div className='banda'>         
          <div className='banda__cabecalho' style={{backgroundColor: cor}}>
@@ -11,7 +16,7 @@ const Banda = ({banda, imagem, cor, genero}) => {
             <h4 className={'rodape__nome'} style={{color: cor}}>{banda}</h4>
             <h5 className={'rodape__genero'} style={{color: cor}}>{genero}</h5>
          </div>
-         <BiTrash className={'banda__excluir'} fill={cor} />
+         <BiTrash className={'banda__excluir'} onClick={executaExcluiBanda} fill={cor} />
       </div>
    
    );

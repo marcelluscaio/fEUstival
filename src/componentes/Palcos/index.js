@@ -7,7 +7,7 @@ const Palcos = (props) => {
       props.bandas.length > 0 && <section className='palco' style={{backgroundColor: hexToRgba(props.cor, 0.25)}}>
          <h3 className='palco__titulo' style={{borderColor: props.cor, color: props.cor}}>{props.nome}</h3>
          <div className='palco__bandas'>
-            {props.bandas.map(banda => <Banda key={banda.banda} banda={banda.banda} genero={banda.genero} imagem={banda.imagem} palco={banda.palco} cor={props.cor} />)}
+            {props.bandas.map(banda => <Banda key={banda.banda} banda={banda.banda} genero={banda.genero} imagem={banda.imagem} palco={banda.palco} cor={props.cor} id={banda.id} excluiBanda={props.excluiBanda} />)}
          </div>
       </section>
    )
