@@ -25,10 +25,10 @@ O objetivo deste projeto foi criar um site utilizando ReactJS e consumindo a API
 
 ## Próximos passos
 
-- [ ] Permitir que usuario apague bandas inseridas
-- [ ] Informar se o show sera transmitido ou nao
+- [X] Permitir que usuario apague bandas inseridas
+- [X] Permitir criacao de novos palcos
 - [ ] Permitir que usuario mude a cor
-- [ ] Permitir criacao de novos palcos
+- [ ] Informar se o show sera transmitido ou nao
 - [ ] Trazer opções de bandas para usuario e permitir seleção ao clique
 - [ ] Criar categoria de headliner (destaque na estilizacao)
 - [ ] Permitir drag and drop para organizar palcos

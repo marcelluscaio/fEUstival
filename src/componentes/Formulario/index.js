@@ -3,12 +3,15 @@ import {useState, useEffect} from 'react';
 import { client_id, client_secret } from '../../keys.js';
 
 const Formulario = (props) => {
-
    const [banda, setBanda] = useState('');
    const [imagem, setImagem] = useState('');
    const [genero, setGenero] = useState('');
    const [palco, setPalco] = useState('');
    const [accessToken, setAccessToken] = useState("");
+   const [novoPalco, setNovoPalco] = useState({
+      nome: '',
+      cor: '#666666'
+   });
 
    useEffect(() => {
          let authParameters = {
@@ -49,7 +52,7 @@ const Formulario = (props) => {
             setBanda('')      
             setImagem('')
             setPalco('')
-      }, [imagem])   
+      }, [imagem]);
    
    return(
       <section className='formulario'>
@@ -83,6 +86,30 @@ const Formulario = (props) => {
             </select>
            </div>
            <button>Inserir banda</button>
+         </form>
+         <form onSubmit={(e) => {
+            e.preventDefault();
+            props.inserirPalco(novoPalco);
+            setNovoPalco({
+               nome: '',
+               cor: '#666666'}
+               )
+            }
+         }>
+            <div className={'field-container novo-palco'}>
+               <label>Novo palco</label>
+               <input 
+                  type={'text'}
+                  placeholder={'Crie um palco'} 
+                  value={novoPalco.nome} 
+                  onChange={(e) => {
+                     e.preventDefault();
+                     setNovoPalco({...novoPalco, nome: e.target.value});                 
+                     }
+                  } 
+                  required />
+            </div>
+            <button>Criar palco</button>
          </form>
       </section>
    )

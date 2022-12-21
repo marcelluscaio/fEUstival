@@ -33,12 +33,6 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario 
-        nomesPalcos={palcos.map(palco => palco.nome)} 
-        inserirBanda= { banda => {
-          setBandas([...bandas, banda]);          
-          }
-        } />
 
      {palcos.map(palco => <Palcos
         key={palco.nome} 
@@ -47,6 +41,19 @@ function App() {
         bandas={bandas.filter(banda => banda.palco === palco.nome)}
         excluiBanda = {excluiBandaSelecionada}
       />)}
+
+      <Formulario 
+        nomesPalcos={palcos.map(palco => palco.nome)} 
+        inserirBanda= { banda => {
+          setBandas([...bandas, banda]);          
+          }
+        }
+        inserirPalco= { palco => {
+          setPalcos([...palcos, palco])
+          }
+        }
+         />
+
     </div>
   );
 }

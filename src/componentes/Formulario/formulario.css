@@ -59,11 +59,19 @@ input::-webkit-search-cancel-button{
    cursor: pointer;
 }
 
+.novo-palco > label{
+   width: 100%;
+}
+
 @media screen and (min-width: 800px){
    .field-container{
       flex-direction: row;
       gap: 2vw;
        align-items: baseline ;
+   }
+
+   .novo-palco{
+      flex-direction: column;
    }
 
 }
