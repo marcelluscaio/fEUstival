@@ -2,6 +2,10 @@
    padding: calc(2vh + 2vw) 0;
 }
 
+.formulario > :last-of-type{
+   margin-top: calc(4vh + 4vw);
+}
+
 .field-container{
    margin: 0 auto calc(1vh + 1vw);
    display: flex;
@@ -60,8 +64,14 @@ input::-webkit-search-cancel-button{
 }
 
 .novo-palco > label{
-   width: 100%;
+   width: auto;
+   flex-shrink: 0;
 }
+
+input[type=text]{
+   width: auto;
+   flex-grow: 1;
+} /*Input text behaves differently from others*/
 
 @media screen and (min-width: 800px){
    .field-container{
@@ -69,11 +79,6 @@ input::-webkit-search-cancel-button{
       gap: 2vw;
        align-items: baseline ;
    }
-
-   .novo-palco{
-      flex-direction: column;
-   }
-
 }
 
 @media screen and (min-width: 1600px){
