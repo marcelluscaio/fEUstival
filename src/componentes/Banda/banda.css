@@ -20,6 +20,7 @@
    margin: 0 auto;
    display: block;
    transform: translateY(25%);
+   object-fit: cover;
 
 }
 
