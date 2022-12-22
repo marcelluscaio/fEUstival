@@ -27,7 +27,11 @@ function App() {
   ]);
 
   function excluiBandaSelecionada(id){
-    setBandas(bandas.filter(banda => banda.id != id))
+    setBandas(bandas.filter(banda => banda.id !== id))
+  }
+
+  function mudaCorPalco(cor, nome){    
+    setPalcos(palcos.map(palco => palco.nome===nome ? {nome: nome, cor: cor} : {nome: palco.nome, cor: palco.cor}))
   }
 
   return (
@@ -40,6 +44,7 @@ function App() {
         cor={palco.cor}
         bandas={bandas.filter(banda => banda.palco === palco.nome)}
         excluiBanda = {excluiBandaSelecionada}
+        mudaCor = {mudaCorPalco}
       />)}
 
       <Formulario 

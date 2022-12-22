@@ -34,6 +34,22 @@
    background-color: var(--green);
 }
 
+.field-container > select{
+   appearance: none;
+   position: relative;
+}
+
+.field-container > select::before{
+   content: "";
+   display: inline-block;
+   width: 50px; /*calc(min(75%, calc(30 * var(--size-small))) / 10 ) */
+   height: 50px;
+   /* padding-top: 100%; */
+   background-color: red;
+   position: absolute;
+   /*pq nao funciona?*/
+}
+
 option{
    background: #ccdbcc;
    color: #191414 ;
