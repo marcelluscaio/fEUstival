@@ -77,6 +77,8 @@ const Formulario = (props) => {
             <label>Palco</label>
             <select
                value={palco}
+               onClick={({target}) => {target.classList.toggle('roda')}}
+               onBlur={({target}) => {target.classList.remove('roda')}}
                onChange={(e) => setPalco(e.target.value)}
                required>
                <option key=""></option>
