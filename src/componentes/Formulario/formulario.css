@@ -36,23 +36,41 @@
 
 .field-container > select{
    appearance: none;
+}
+
+.field-container:has(select){
    position: relative;
 }
 
-.field-container > select::before{
+.field-container:has(select)::before{
+   position: absolute;
    content: "";
    display: inline-block;
-   width: 50px; /*calc(min(75%, calc(30 * var(--size-small))) / 10 ) */
-   height: 50px;
-   /* padding-top: 100%; */
-   background-color: red;
-   position: absolute;
-   /*pq nao funciona?*/
+   --size-arrow: var(--size-small);
+   width: var(--size-arrow);
+   aspect-ratio: 1;
+   background-color: transparent;
+   border-bottom: 1px solid var(--green);
+   border-left: 1px solid var(--green);
+   right: var(--size-arrow);
+   top: 50%;
+   pointer-events: none;
+   transform: translateY(-60%) scale(.8) rotate(-45deg);
+   transition: transform .5s ease-in-out;
+}
+
+.field-container:has(select:focus)::before{
+   transform: translateY(-60%) scale(.8) rotate(135deg);
 }
 
 option{
    background: #ccdbcc;
    color: #191414 ;
+}
+
+option:checked{
+   background: #191414;
+   color: #ccdbcc;
 }
 
 .field-container > input::placeholder{

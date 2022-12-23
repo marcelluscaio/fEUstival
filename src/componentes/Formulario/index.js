@@ -73,7 +73,7 @@ const Formulario = (props) => {
                   } 
                   required />
             </div>
-           <div className={'field-container'}>
+           <div className={'field-container select-container'}>
             <label>Palco</label>
             <select
                value={palco}
