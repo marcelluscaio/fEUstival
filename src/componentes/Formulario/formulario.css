@@ -53,9 +53,9 @@
    border-bottom: 1px solid var(--green);
    border-left: 1px solid var(--green);
    right: var(--size-arrow);
-   top: 50%;
+   bottom: var(--size-arrow);
    pointer-events: none;
-   transform: translateY(-60%) scale(.8) rotate(-45deg);
+   transform: scale(.8) rotate(-45deg);
    transition: transform .75s ease-in-out;
 }
 

@@ -27,11 +27,12 @@ O objetivo deste projeto foi criar um site utilizando ReactJS e consumindo a API
 
 - [X] Permitir que usuario apague bandas inseridas
 - [X] Permitir criacao de novos palcos
-- [ ] Estilização da seta do select
+- [X] Estilização da seta do select
 - [X] Permitir que usuario mude a cor
 - [X] Estilizacao input color
 - [ ] Trazer opções de bandas para usuario e permitir seleção ao clique
 - [ ] Informar se o show sera transmitido ou nao
+- [ ] Checar responsividade geral (QUando seta roda ela ultrapassa o input)
 
 - [ ] Criar categoria de headliner (destaque na estilizacao)
 - [ ] Permitir drag and drop para organizar palcos
