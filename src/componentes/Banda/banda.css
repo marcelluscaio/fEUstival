@@ -1,6 +1,6 @@
 .banda{   
    width: 45%;
-   margin-bottom: calc(3vw + 3vh);
+   height: 35vmax;
    position: relative;
 }
 
@@ -41,16 +41,23 @@
 
 .banda__excluir{
    position: absolute;
-   right: 0;
+   right: calc(.5vw + .5vh);
+   top: calc(.5vw + .5vh);
    --size: calc(2vw + 2vh);
    height: var(--size);
    width: var(--size);
-   filter: grayscale(.35);
+   filter: brightness(0.4);
 }
 
 @media screen and (min-width: 800px){
    .banda{   
-   width: 30%
+      width: 30%
    }
 
+}
+
+@media screen and (min-width: 700px) and (max-width: 850px){
+   .banda{
+      height: calc(33vmax + 12vmin);
+   }
 }

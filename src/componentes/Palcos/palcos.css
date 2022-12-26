@@ -54,5 +54,5 @@ input[type=color]{
    display: flex;
    justify-content: space-around;
    flex-wrap: wrap;
-   gap: 5vh 5%;
+   gap: 2.5vh 5%;
 }
