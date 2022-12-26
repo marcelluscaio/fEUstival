@@ -21,7 +21,6 @@
    display: block;
    transform: translateY(25%);
    object-fit: cover;
-
 }
 
 .banda__rodape{
@@ -47,4 +46,11 @@
    height: var(--size);
    width: var(--size);
    filter: grayscale(.35);
+}
+
+@media screen and (min-width: 800px){
+   .banda{   
+   width: 30%
+   }
+
 }
