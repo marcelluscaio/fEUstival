@@ -55,12 +55,12 @@
    right: var(--size-arrow);
    bottom: var(--size-arrow);
    pointer-events: none;
-   transform: scale(.8) rotate(-45deg);
+   transform: scale(.5) rotate(-45deg);
    transition: transform .75s ease-in-out;
 }
 
 .field-container:has(.roda)::before{
-   transform: translateY(-60%) scale(.8) rotate(135deg);
+   transform: scale(.5) rotate(135deg);
    transition: transform .25s ease-in-out;
 }
 
