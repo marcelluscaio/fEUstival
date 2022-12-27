@@ -108,6 +108,46 @@ input[type=text]{
    flex-grow: 1;
 } /*Input text behaves differently from others*/
 
+.list-band-container{
+   display: flex;
+   flex-direction: column;
+   gap: 2vh;
+   max-height: 50vh;
+   overflow-y: scroll;
+   width: min(75%, calc(30 * var(--size-small)));
+   margin: 0 auto;
+}
+
+.list-band{
+   display: flex;
+   width: 100%;
+   align-items: center;
+
+}
+
+.band-name{
+   flex: 2;
+   color: #ccdbcc;
+   font-weight: 500;
+}
+
+.band-img{
+   height: 20vh;
+   object-fit: cover;
+   flex: 5;
+}
+
+.error-msg{
+   color: #ccdbcc;
+   text-align: center;
+
+   padding: 0;
+   margin: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   position: relative;
+}
+
 @media screen and (min-width: 800px){
    .field-container{
       flex-direction: row;

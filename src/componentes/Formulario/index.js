@@ -13,6 +13,8 @@ const Formulario = (props) => {
       cor: '#666666'
    });
 
+   const [listaBandas, setListaBandas] = useState([]);
+
    useEffect(() => {
          let authParameters = {
             method: 'POST',
@@ -25,8 +27,26 @@ const Formulario = (props) => {
             .then(result => result.json())
             .then(data => setAccessToken(data.access_token))
       } , [])
+   
+  
+   async function listBands(banda){
+      setListaBandas([]);
+      if(banda.length>2){      
+         let busca = await fetch(`https://api.spotify.com/v1/search?q=${banda}&type=artist`, {
+            method: 'GET',
+            headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + accessToken
+            }
+         });
+         let buscaJSON = await busca.json();
+         setListaBandas(buscaJSON.artists.items);
+      }
+   }
 
-   async function search (banda) {
+   /* async function search (banda) {
+      
       let busca = await fetch(`https://api.spotify.com/v1/search?q=${banda}&type=artist`, {
          method: 'GET',
          headers: {
@@ -35,10 +55,9 @@ const Formulario = (props) => {
          "Authorization": "Bearer " + accessToken
          }
       });
-      let buscaJSON = await busca.json();
-      setBanda(buscaJSON.artists.items[0].name);
-      setImagem(buscaJSON.artists.items[0].images[0].url);
-      setGenero(buscaJSON.artists.items[0].genres[0]);
+      let buscaJSON = await busca.json();      
+      
+
    }
 
    useEffect(() =>{
@@ -52,27 +71,62 @@ const Formulario = (props) => {
             setBanda('')      
             setImagem('')
             setPalco('')
-      }, [imagem]);
+      }, [imagem]); */
+
+      function insereBanda(){
+         props.inserirBanda({
+               banda: banda,
+               imagem: imagem,
+               genero: genero,
+               palco: palco,
+               id: `${banda}-${palco}`
+            })
+            setBanda('')      
+            setImagem('')
+            setPalco('')
+      }
    
    return(
-      <section className='formulario'>
+      <section className='formulario'>                 
+         
          <form onSubmit={(e) => {
             e.preventDefault();
-            search(banda)}
+            insereBanda()}
             }>
+            
             <div className={'field-container'}>
                <label>Artista</label>
                <input 
                   type={'search'}
                   placeholder={'Procure seu artista favorito'} 
-                  value={banda} 
+                  value={banda}   
                   onChange={(e) => {
                      e.preventDefault();
-                     setBanda(e.target.value);                   
+                     setBanda(e.target.value);
+                     listBands(e.target.value)                             
                      }
-                  } 
+                  }
                   required />
             </div>
+            <div className={"list-band-container"}>
+               {listaBandas.map((itemLista, id) => {
+               return ( 
+                  <div onClick={() => {
+                     setBanda(itemLista.name); 
+                     setImagem(itemLista.images[0] === undefined ? "Erro" : itemLista.images[0].url);
+                     setGenero(itemLista.genres[0]);
+                     setListaBandas([])}} 
+                  className={"list-band"} 
+                  key={id}
+                  >
+                     <p className={"band-name"}>{itemLista.name}</p>
+                     {itemLista.images[0] === undefined ? <div className={"band-img"}><p className={"error-msg"}>Sem imagem disponível</p></div> : <img className={"band-img"} src={itemLista.images[0].url} />}                     
+                  </div>
+               
+               )
+               })
+            }
+         </div>
            <div className={'field-container select-container'}>
             <label>Palco</label>
             <select

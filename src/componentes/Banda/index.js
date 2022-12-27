@@ -1,6 +1,5 @@
 import './banda.css';
-import { BiTrash } from "react-icons/bi";
-import { BsCameraVideoFill, BsCameraVideoOffFill } from "react-icons/bs"
+import { BiTrash, BiCameraOff } from "react-icons/bi";
 
 const Banda = ({banda, imagem, cor, genero, id, excluiBanda}) => {
    function executaExcluiBanda(){
@@ -10,7 +9,7 @@ const Banda = ({banda, imagem, cor, genero, id, excluiBanda}) => {
    return(
       <div className='banda'>         
          <div className='banda__cabecalho' style={{backgroundColor: cor}}>
-            <img className={'cabecalho__imagem'} src={imagem} alt={banda}/>
+            {imagem === "Erro" ? <div className={'cabecalho__imagem'}><BiCameraOff className={'cabecalho__sem-imagem'} fill={cor} /></div> : <img className={'cabecalho__imagem'} src={imagem} alt={banda}/>}
          </div>
          <div className='banda__rodape'>
             <h4 className={'rodape__nome'} style={{color: cor}}>{banda}</h4>

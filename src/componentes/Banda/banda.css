@@ -23,6 +23,17 @@
    object-fit: cover;
 }
 
+.cabecalho__imagem:has(.cabecalho__sem-imagem){
+   display: block;
+}
+
+.cabecalho__sem-imagem{
+   filter: brightness(0.4);
+   width: 100%;
+   height: 40%;
+
+}
+
 .banda__rodape{
    text-align: center;
 }
@@ -48,6 +59,8 @@
    width: var(--size);
    filter: brightness(0.4);
 }
+
+
 
 @media screen and (min-width: 800px){
    .banda{   

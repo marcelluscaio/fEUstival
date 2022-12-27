@@ -31,7 +31,7 @@ O objetivo deste projeto foi criar um site utilizando ReactJS e consumindo a API
 - [X] Permitir que usuario mude a cor
 - [X] Estilizacao input color
 - [X] Checar responsividade geral
-- [ ] Trazer opções de bandas para usuario e permitir seleção ao clique
+- [X] Trazer opções de bandas para usuario e permitir seleção ao clique
 
 - [ ] Criar categoria de headliner (destaque na estilizacao)
 - [ ] Permitir drag and drop para organizar palcos
