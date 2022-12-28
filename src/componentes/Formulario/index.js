@@ -30,8 +30,9 @@ const Formulario = (props) => {
    
   
    async function listBands(banda){
-      setListaBandas([]);
-      if(banda.length>2){      
+      let container = document.querySelector(".list-band-container");
+      if(banda.length>2){
+         container.classList.add("show");
          let busca = await fetch(`https://api.spotify.com/v1/search?q=${banda}&type=artist`, {
             method: 'GET',
             headers: {
@@ -42,7 +43,10 @@ const Formulario = (props) => {
          });
          let buscaJSON = await busca.json();
          setListaBandas(buscaJSON.artists.items);
-      }
+      } else{
+         setListaBandas([]);
+         container.classList.remove("show");
+         }
    }
 
    /* async function search (banda) {
@@ -109,7 +113,7 @@ const Formulario = (props) => {
                   required />
             </div>
             <div className={"list-band-container"}>
-               {listaBandas.map((itemLista, id) => {
+               {listaBandas.length>1 && listaBandas.map((itemLista, id) => {
                return ( 
                   <div onClick={() => {
                      setBanda(itemLista.name); 

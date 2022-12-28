@@ -32,6 +32,7 @@
    color: #ccdbcc;
    background-image: linear-gradient(45deg, transparent -500%, #191414 120%);
    background-color: var(--green);
+   outline: none;
 }
 
 .field-container > select{
@@ -114,9 +115,25 @@ input[type=text]{
    gap: 2vh;
    max-height: 50vh;
    overflow-y: scroll;
-   width: min(75%, calc(30 * var(--size-small)));
-   margin: 0 auto;
+   width: calc(-3vw - 3vh + min(75%, calc(30 * var(--size-small))));
+   margin: 0 auto calc(1vh + 1vw);   
 }
+
+form:has(.list-band) .field-container:first-child{
+   margin-bottom: 0;
+}
+
+.show{
+   animation: grow 1s ease-in-out forwards;
+}
+
+@keyframes grow{
+   from{
+      max-height: 0;
+   }
+}
+
+
 
 .list-band{
    display: flex;
@@ -132,8 +149,9 @@ input[type=text]{
 }
 
 .band-img{
-   height: 20vh;
+   height: calc(10vh + 10vw);
    object-fit: cover;
+   object-position: 0 15%;
    flex: 5;
 }
 
