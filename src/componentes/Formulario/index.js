@@ -1,6 +1,6 @@
 import './formulario.css';
 import {useState, useEffect} from 'react';
-import { client_id, client_secret } from '../../keys.js';
+/* import { client_id, client_secret } from '../../keys.js'; */
 
 const Formulario = (props) => {
    const [banda, setBanda] = useState('');

@@ -25,14 +25,13 @@ O objetivo deste projeto foi criar um site utilizando ReactJS e consumindo a API
 
 ## Próximos passos
 
-- [X] Permitir que usuario apague bandas inseridas
-- [X] Permitir criacao de novos palcos
+- [X] Permitir que usuário apague bandas inseridas
+- [X] Permitir criação de novos palcos
 - [X] Estilização da seta do select
-- [X] Permitir que usuario mude a cor
-- [X] Estilizacao input color
+- [X] Permitir que usuário mude a cor
+- [X] Estilização do input color
 - [X] Checar responsividade geral
 - [X] Trazer opções de bandas para usuario e permitir seleção ao clique
-- [ ] Compartilhar a propria lista no instagram
 
 ## Screenshots
 <p align="middle">
