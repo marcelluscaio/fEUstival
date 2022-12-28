@@ -113,7 +113,7 @@ const Formulario = (props) => {
                   required />
             </div>
             <div className={"list-band-container"}>
-               {listaBandas.length>1 && listaBandas.map((itemLista, id) => {
+               {listaBandas.length>0 && listaBandas.map((itemLista, id) => {
                return ( 
                   <div onClick={() => {
                      setBanda(itemLista.name); 

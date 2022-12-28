@@ -133,12 +133,11 @@ form:has(.list-band) .field-container:first-child{
    }
 }
 
-
-
 .list-band{
    display: flex;
    width: 100%;
    align-items: center;
+   cursor: pointer;
 
 }
 

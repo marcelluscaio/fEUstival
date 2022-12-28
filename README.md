@@ -23,15 +23,13 @@ O objetivo deste projeto foi criar um site utilizando ReactJS e consumindo a API
 <a href="https://marcelluscaio.github.io/fEUstival/">Crie o seu fEUstival</a>.
 
 
-## Próximos passos
+## Próximos passos (Feito)
 
 - [X] Permitir que usuário apague bandas inseridas
 - [X] Permitir criação de novos palcos
-- [X] Estilização da seta do select
-- [X] Permitir que usuário mude a cor
-- [X] Estilização do input color
-- [X] Checar responsividade geral
-- [X] Trazer opções de bandas para usuario e permitir seleção ao clique
+- [X] Estilização e animação da seta do select
+- [X] Permitir que usuário mude a cor do palco com input estilizado
+- [X] Trazer opções de bandas para usuário e permitir seleção ao clique
 
 ## Screenshots
 <p align="middle">
