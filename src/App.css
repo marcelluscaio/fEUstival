@@ -21,11 +21,11 @@
 
  html{
    scrollbar-color: var(--black) var(--green);
-   scrollbar-width: calc(1vw + 1vh);  /*Melhorar medida*/
+   scrollbar-width: calc(.5vw + 1vh);  /*Melhorar medida*/
  } 
 
 ::-webkit-scrollbar{
-    width: calc(1vw + 1vh); /*Melhorar medida*/
+    width: calc(.5vw + 1vh); /*Melhorar medida*/
     background-image: linear-gradient( var(--green) -100%, var(--black) 100%)
 }
 

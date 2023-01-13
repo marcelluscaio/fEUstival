@@ -58,6 +58,7 @@
    height: var(--size);
    width: var(--size);
    filter: brightness(0.4);
+   cursor: pointer;
 }
 
 
