@@ -145,6 +145,7 @@ form:has(.list-band) .field-container:first-child{
    flex: 2;
    color: #ccdbcc;
    font-weight: 500;
+   font-size: var(--size-small)
 }
 
 .band-img{
