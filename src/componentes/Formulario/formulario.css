@@ -142,17 +142,19 @@ form:has(.list-band) .field-container:first-child{
 }
 
 .band-name{
-   flex: 2;
    color: #ccdbcc;
    font-weight: 500;
-   font-size: var(--size-small)
+   font-size: var(--size-small);
+   width: 100%;
+   text-align: center;
 }
 
 .band-img{
-   height: calc(10vh + 10vw);
+   height: calc(7vh + 8vw);
+   aspect-ratio: 1;
+   border-radius: 50%;
    object-fit: cover;
    object-position: 0 15%;
-   flex: 5;
 }
 
 .error-msg{

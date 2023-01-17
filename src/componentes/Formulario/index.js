@@ -123,8 +123,11 @@ const Formulario = (props) => {
                   className={"list-band"} 
                   key={id}
                   >
+                     {itemLista.images[0] === undefined 
+                     ? <div className={"band-img"}><p className={"error-msg"}>Sem imagem disponível</p></div> 
+                     : <img className={"band-img"} src={itemLista.images[0].url} />} 
                      <p className={"band-name"}>{itemLista.name}</p>
-                     {itemLista.images[0] === undefined ? <div className={"band-img"}><p className={"error-msg"}>Sem imagem disponível</p></div> : <img className={"band-img"} src={itemLista.images[0].url} />}                     
+                                         
                   </div>
                
                )
