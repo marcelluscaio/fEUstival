@@ -170,15 +170,20 @@ form:has(.list-band) .field-container:first-child{
    position: relative;
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 50em){
    .field-container{
       flex-direction: row;
       gap: 2vw;
-       align-items: baseline ;
+      align-items: baseline ;
+   }
+
+   .list-band-container{
+      width: calc(-4vw - 15vh + min(75%, calc(30 * var(--size-small))));
+      transform: translateX(calc(3vw + 3vh));
    }
 }
 
-@media screen and (min-width: 1600px){
+@media screen and (min-width: 100em){
    
    .field-container > input,
    .field-container > select{
