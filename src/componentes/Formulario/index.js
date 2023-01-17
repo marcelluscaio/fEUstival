@@ -32,6 +32,7 @@ const Formulario = (props) => {
    async function listBands(banda){
       let container = document.querySelector(".list-band-container");
       if(banda.length>2){
+         
          container.classList.add("show");
          let busca = await fetch(`https://api.spotify.com/v1/search?q=${banda}&type=artist`, {
             method: 'GET',
@@ -120,20 +121,17 @@ const Formulario = (props) => {
                      setImagem(itemLista.images[0] === undefined ? "Erro" : itemLista.images[0].url);
                      setGenero(itemLista.genres[0]);
                      setListaBandas([])}} 
-                  className={"list-band"} 
-                  key={id}
+                     className={"list-band"} 
+                     key={id}
                   >
                      {itemLista.images[0] === undefined 
                      ? <div className={"band-img"}><p className={"error-msg"}>Sem imagem disponível</p></div> 
                      : <img className={"band-img"} src={itemLista.images[0].url} />} 
                      <p className={"band-name"}>{itemLista.name}</p>
-                                         
                   </div>
-               
-               )
-               })
-            }
-         </div>
+               )})
+               }
+            </div>
            <div className={'field-container select-container'}>
             <label>Palco</label>
             <select
