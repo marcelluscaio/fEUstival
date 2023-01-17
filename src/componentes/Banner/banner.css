@@ -6,7 +6,7 @@
    height: calc(25vh + 15vw);
    mix-blend-mode: soft-light;
    position: relative;
-   margin-bottom: 2rem;
+   margin-bottom: calc(1.5vw + 2vh + 1.5em);
 }
 
 .credit{

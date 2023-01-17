@@ -14,7 +14,6 @@
 .App {
   background-image: linear-gradient(-45deg, #1DB954 -50%, #191414 120%);
   min-height: 100vh;
-  padding-bottom: calc(3vw + 3vh);
 }
 
 ::selection{
