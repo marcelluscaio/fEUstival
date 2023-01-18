@@ -14,6 +14,7 @@ const Formulario = (props) => {
    });
 
    const [listaBandas, setListaBandas] = useState([]);
+   const container = document.querySelector(".list-band-container");
 
    useEffect(() => {
          let authParameters = {
@@ -30,9 +31,7 @@ const Formulario = (props) => {
    
   
    async function listBands(banda){
-      let container = document.querySelector(".list-band-container");
       if(banda.length>2){
-         
          container.classList.add("show");
          let busca = await fetch(`https://api.spotify.com/v1/search?q=${banda}&type=artist`, {
             method: 'GET',
@@ -120,7 +119,9 @@ const Formulario = (props) => {
                      setBanda(itemLista.name); 
                      setImagem(itemLista.images[0] === undefined ? "Erro" : itemLista.images[0].url);
                      setGenero(itemLista.genres[0]);
-                     setListaBandas([])}} 
+                     setListaBandas([]);
+                     container.classList.remove("show");                     
+                     }} 
                      className={"list-band"} 
                      key={id}
                   >
