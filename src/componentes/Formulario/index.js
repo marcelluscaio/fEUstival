@@ -11,7 +11,7 @@ const Formulario = (props) => {
    const [novoPalco, setNovoPalco] = useState({
       nome: '',
       cor: '#666666'
-   });
+   }); 
 
    const [listaBandas, setListaBandas] = useState([]);
    const container = document.querySelector(".list-band-container");
